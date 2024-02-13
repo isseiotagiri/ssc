@@ -2,17 +2,17 @@
 
 # 解像度設定を定義する関数
 define_resolution_settings() {
-    resolution_1="<mode>" #1920x1200
-    resolution_2="<mode>" #1920x1200
-    resolution_3="<mode>" #1920x1200
+    resolution_1="<mode>" #displayplacer listで調べる
+    resolution_2="<mode>" ##displayplacer listで調べる
+    resolution_3="<mode>" ##displayplacer listで調べる
 }
 
 # 解像度設定を表示する関数
 show_resolution_settings() {
     echo "Available resolution settings:"
-    echo "1. $resolution_1"
-    echo "2. $resolution_2"
-    echo "3. $resolution_3"
+    echo "1. **** × ****" #ターミナルに表示される文字
+    echo "2. $resolution_2" #ターミナルに表示される文字
+    echo "3. $resolution_3" #ターミナルに表示される文字
 }
 
 # 解像度を変更する関数
