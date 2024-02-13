@@ -11,8 +11,8 @@ define_resolution_settings() {
 show_resolution_settings() {
     echo "Available resolution settings:"
     echo "1. **** × ****" #ターミナルに表示される文字
-    echo "2. $resolution_2" #ターミナルに表示される文字
-    echo "3. $resolution_3" #ターミナルに表示される文字
+    echo "2. **** × ****" #ターミナルに表示される文字
+    echo "3. **** × ****" #ターミナルに表示される文字
 }
 
 # 解像度を変更する関数
