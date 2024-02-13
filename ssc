@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# 解像度設定を定義する関数
+define_resolution_settings() {
+    resolution_1="<mode>" #1920x1200
+    resolution_2="<mode>" #1920x1200
+    resolution_3="<mode>" #1920x1200
+}
+
+# 解像度設定を表示する関数
+show_resolution_settings() {
+    echo "Available resolution settings:"
+    echo "1. $resolution_1"
+    echo "2. $resolution_2"
+    echo "3. $resolution_3"
+}
+
+# 解像度を変更する関数
+change_resolution() {
+    selected_resolution=$1
+    case $selected_resolution in
+        1)
+            displayplacer "id:<ディスプレイid> mode:$resolution_1"
+            echo "Display resolution changed to $resolution_1"
+            ;;
+        2)
+            displayplacer "id:<ディスプレイid> mode:$resolution_2"
+            echo "Display resolution changed to $resolution_2"
+            ;;
+        3)
+            displayplacer "id:<ディスプレイid> mode:$resolution_3"
+            echo "Display resolution changed to $resolution_3"
+            ;;
+        *)
+            echo "Invalid selection. Exiting."
+            exit 1
+            ;;
+    esac
+}
+
+# 解像度設定を定義する
+define_resolution_settings
+
+# 使用可能な解像度設定を表示する
+show_resolution_settings
+
+# ユーザーに選択を促す
+read -p "Select a resolution setting (1/2/3): " choice
+
+# 選択された解像度設定を使用して解像度を変更する
+change_resolution $choice
