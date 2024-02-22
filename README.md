@@ -2,15 +2,6 @@
 ターミナルでコマンドを実行すると、macの解像度を変更できる
 screen size changeの略です
 
-## セットアップ
-
-- displayplacerをHomebrewでインストールする
-
-```
-brew update
-brew tap jakehilborn/jakehilborn && brew install displayplacer
-```
-
 ## Usage
 
 ```
