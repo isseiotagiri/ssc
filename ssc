@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# 解像度設定を定義する関数
+# 取得する解像度を決める
 define_resolution_settings() {
     resolution_1="<mode>" #displayplacer listで調べる
     resolution_2="<mode>" ##displayplacer listで調べる
     resolution_3="<mode>" ##displayplacer listで調べる
 }
 
-# 解像度設定を表示する関数
+# 解像度設定選択を決める
 show_resolution_settings() {
     echo "Available resolution settings:"
     echo "1. **** × ****" #ターミナルに表示される文字
@@ -44,8 +44,8 @@ define_resolution_settings
 # 使用可能な解像度設定を表示する
 show_resolution_settings
 
-# ユーザーに選択を促す
+# 解像度を取得し、ターミナルに解像度の選択肢を表示する
 read -p "Select a resolution setting (1/2/3): " choice
 
-# 選択された解像度設定を使用して解像度を変更する
+# 選択した解像度を表示する
 change_resolution $choice
